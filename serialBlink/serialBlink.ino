@@ -9,6 +9,7 @@ void loop() {
   digitalWrite(13, HIGH);
   Serial.println("On");
   delay(1000);
+  digitalWrite (13, LOW);
   Serial.println("Off");
   delay(1000);
 }
