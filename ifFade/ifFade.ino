@@ -6,11 +6,12 @@ void setup() {
   pinMode (9, OUTPUT);
 }
 
-
-void loop() {
-  lightValue = lightValue + delta;
-  if (lightValue <= 0 || lightValue >= 255) {
-    delta = -delta;
+  void loop() {
+    lightValue = lightValue + delta;
+    if (lightValue <= 0 || lightValue >= 255) {
+      delta = -delta;
+    }
+    analogWrite(9, lightValue);
+    Serial.println(lightValue);
+    delay(10);
   }
-
-}
